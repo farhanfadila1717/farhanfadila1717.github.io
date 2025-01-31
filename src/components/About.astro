@@ -1,0 +1,78 @@
+---
+import IcEmail from "../assets/ic_email.svg";
+import IcLinkedIn from "../assets/ic_linkedin.svg";
+import IcGithub from "../assets/ic_github.svg";
+import IcDownload from "../assets/ic_download.svg";
+import Star from "../assets/star.svg";
+import { AVATAR_URL, GITHUB_URL, LINKEDIN_URL, MAIL_TO } from "../static";
+---
+
+<section
+  id="about"
+  class="mt-[80px] bg-[#141414]"
+  style="
+background-image:
+  linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+background-size: 40px 40px;
+"
+>
+  <div
+    class="max-w-screen-lg py-8 sm:pu sm:h-[85vh] mx-auto items-center align-top grid sm:grid-cols-2 gap-6"
+  >
+    <div class="relative">
+      <div class="px-4 sm:px-0">
+        <h1 class="text-lg sm:text-2xl text-pallate-2 font-bold">
+          I'm Farhan Fadila
+        </h1>
+        <h2 class="mt-2 text-2xl sm:text-4xl text-white font-extrabold">
+          Flutter Developer
+        </h2>
+        <p class="mt-4 text-white/70 text-sm sm:text-base">
+          I’m from Indonesia and I have been working as a Mobile Developer for
+          more than 4 years. I’ve worked for a Indonesia company Bicarakan.id as
+          a Software Engineer for 3 years. I’ve been freelancing since 2024, and
+          right now I am looking forward to collaborate with you!
+        </p>
+        <div class="mt-6 flex gap-8 items-center">
+          <a
+            href={MAIL_TO}
+            target="_blank"
+            class="bg-pallate-2 hover:bg-pallate-2/70 flex gap-2 text-white px-5 py-3 rounded"
+          >
+            <IcEmail size={24} /> Email Me
+          </a>
+          <a href={LINKEDIN_URL} target="_blank">
+            <IcLinkedIn size={24} />
+          </a>
+          <a href={GITHUB_URL} target="_blank">
+            <IcGithub size={24} />
+          </a>
+        </div>
+        <a
+          href=""
+          target="_blank"
+          class="mt-2 flex py-3 px-2 text-white text-sm gap-2"
+        >
+          <IcDownload size={24} />
+          Download CV
+        </a>
+      </div>
+    </div>
+    <div class="flex justify-center relative">
+      <div class="relative size-[250px]">
+        <img
+          src={AVATAR_URL}
+          height="250"
+          width="250"
+          alt="Profile Picture"
+          class="size-[250px] rounded-t-full rounded-b-lg border-4 border-white"
+        />
+        <div class="absolute -top-[50px] right-0 flex">
+          <Star size={30} />
+          <Star size={70} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,63 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout>
-  <section class="bg-[#141414]">
-    <div
-      class="max-w-screen-lg h-screen mx-auto items-center align-top grid sm:grid-cols-2 gap-6"
-    >
-      <div class="flex justify-center">
-        <img
-          src="https://avatars.githubusercontent.com/u/43161050?v=4"
-          height="150"
-          width="150"
-          alt="Profile Picture"
-          class="size-[150px] rounded-lg border-4 border-white"
-        />
-      </div>
-      <div class="">
-        <h1 class="text-2xl text-pallate-2 font-bold">I'm Farhan Fadila</h1>
-        <h2 class="text-4xl text-white font-extrabold">
-          Software Engineer focusing on Mobile Developer with Flutter
-        </h2>
-        <p class="mt-4 text-white/70 text-base">
-          I’m from Indonesia and I have been working as a Mobile Developer for
-          more than 4 years. I’ve worked for a Indonesia company Bicarakan.id as
-          a Software Engineer for 3 years. I’ve been freelancing since 2024, and
-          right now I am looking forward to collaborate with you!
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="max-w-screen-lg mx-auto my-8">
-    <h2 class="text-2xl text-pallate-1 font-bold">Projects</h2>
-    <ul class="mt-4">
-      <li class="mb-4">
-        <h3 class="text-xl text-pallate-2 font-bold">Project 1</h3>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          scelerisque, nunc nec lacinia ultricies, nunc nisl ultricies nunc, nec
-          ultricies nunc nisl nec nunc.
-        </p>
-      </li>
-      <li class="mb-4">
-        <h3 class="text-xl text-pallate-2 font-bold">Project 2</h3>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          scelerisque, nunc nec lacinia ultricies, nunc nisl ultricies nunc, nec
-          ultricies nunc nisl nec nunc.
-        </p>
-      </li>
-      <li class="mb-4">
-        <h3 class="text-xl text-pallate-2 font-bold">Project 3</h3>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          scelerisque, nunc nec lacinia ultricies, nunc nisl ultricies nunc, nec
-          ultricies nunc nisl nec nunc.
-        </p>
-      </li>
-    </ul>
-  </section>
+  <Navbar />
+  <About />
+  <Projects />
+  <Footer />
 </Layout>

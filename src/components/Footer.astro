@@ -1,0 +1,62 @@
+---
+import StrokeText from "./StrokeText.astro";
+
+import IcCode from "../assets/ic_code.svg";
+import IcEmail from "../assets/ic_email.svg";
+import IcLinkedIn from "../assets/ic_linkedin.svg";
+import IcGithub from "../assets/ic_github.svg";
+import { GITHUB_URL, LINKEDIN_URL, MAIL_TO } from "../static";
+---
+
+<footer id="contact" class="bg-black relative overflow-hidden">
+  <div class="relative max-w-screen-lg mx-auto">
+    <div class="absolute top-0 left-0">
+      <StrokeText text="LET'S WORK" />
+      <StrokeText text="TOGETHER" />
+    </div>
+    <div class="absolute top-[50px] right-0 opacity-10">
+      <IcCode size={60} />
+    </div>
+  </div>
+  <div class="absolute -bottom-[100px] -right-[100px]">
+    <div
+      class="size-[300px] rounded-full rotate-45"
+      style="
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+        background-size: 20px 100%;
+      "
+    >
+    </div>
+  </div>
+  <div
+    class="relative max-w-screen-lg flex flex-col items-center mx-auto py-[60px] sm:py-[120px] px-4 sm:px-0"
+  >
+    <h2 class="text-2xl sm:text-4xl text-white font-extrabold text-center">
+      Looking for a Flutter Developer?
+    </h2>
+    <a
+      href={MAIL_TO}
+      target="_blank"
+      class="mt-6 px-6 py-4 flex gap-2 text-white bg-pallate-2 rounded-lg font-bold"
+    >
+      <IcEmail size={24} />
+      Email Me</a
+    >
+    <div class="mt-8 flex items-center justify-center gap-8">
+      <a
+        href={LINKEDIN_URL}
+        target="_blank"
+        class="flex items-center gap-2 text-white"
+      >
+        <IcLinkedIn size={24} />
+      </a>
+      <a
+        href={GITHUB_URL}
+        target="_blank"
+        class="flex items-center gap-2 text-white"
+      >
+        <IcGithub size={24} />
+      </a>
+    </div>
+  </div>
+</footer>

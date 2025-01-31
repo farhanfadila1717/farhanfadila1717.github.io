@@ -1,0 +1,119 @@
+---
+import StrokeText from "./StrokeText.astro";
+
+import Star from "../assets/star.svg";
+import ImgThumbnail1 from "../assets/images/img_thumbnail_1.png";
+import ImgThumbnail2 from "../assets/images/img_thumbnail_2.png";
+
+import IcPlaystore from "../assets/ic_playstore.svg";
+import IcAndroid from "../assets/ic_android.svg";
+import IcAppsStore from "../assets/ic_apps_store.svg";
+import IcGithub from "../assets/ic_github.svg";
+
+interface Projects {
+  image: string;
+  title: string;
+  description: string;
+  buttons: ProjectButton[];
+}
+
+interface ProjectButton {
+  icon: string;
+  text: string;
+  url: string;
+}
+
+const projects: Projects[] = [
+  {
+    image: ImgThumbnail1.src,
+    title: "Bicarakan.id - Client App",
+    description:
+      "Bicarakan.id startup that provides counseling session services with professional psychologists",
+    buttons: [
+      {
+        icon: IcPlaystore.src,
+        text: "Play Store",
+        url: "https://play.google.com/store/apps/details?id=id.bicarakan.client_app&pcampaignid=web_share",
+      },
+      {
+        icon: IcAppsStore.src,
+        text: "App Store",
+        url: "https://apps.apple.com/id/app/bicarakan-psikolog-indonesia/id1568030925",
+      },
+    ],
+  },
+  {
+    image: ImgThumbnail2.src,
+    title: "Muslim Apps",
+    description:
+      "Muslim Apps is an open source application that provides a variety of features for Muslims, such as the Quran, prayer times, and daily prayers",
+    buttons: [
+      {
+        icon: IcAndroid.src,
+        text: "Download Apk",
+        url: "https://drive.google.com/file/d/1i_vGXMpcm2sXe-FZDzQELOqBmrHNaNea/view?usp=drive_link",
+      },
+      {
+        icon: IcGithub.src,
+        text: "Source Code",
+        url: "https://github.com/farhanfadila1717/muslim_apps",
+      },
+    ],
+  },
+];
+---
+
+<section id="projects" class="relative overflow-hidden">
+  <div
+    class="relative max-w-screen-lg px-4 sm:px-0 mx-auto my-[60px] sm:my-[120px]"
+  >
+    <div class="absolute -top-[65px] -right-[30px]">
+      <StrokeText text="PROJECTS" />
+    </div>
+    <div class="relative">
+      <div class="flex">
+        <h2 class="text-2xl sm:text-4xl text-white font-bold">
+          Selected Projects
+        </h2>
+        <div class="absolute -top-[10px] left-[330px] flex items-end">
+          <Star size={50} />
+          <Star size={30} />
+        </div>
+      </div>
+      <div class="mt-6 grid sm:grid-cols-2 gap-6">
+        {
+          projects.map((item) => (
+            <div>
+              <img
+                src={item.image}
+                alt={item.title}
+                class="w-full aspect-video object-cover"
+              />
+              <h3 class="text-base sm:text-lg text-white font-bold mt-2">
+                {item.title}
+              </h3>
+              <p class="text-white/70 text-sm">{item.description}</p>
+              <div class="mt-4 flex gap-4">
+                {item.buttons.map((button) => (
+                  <a
+                    href={button.url}
+                    target="_blank"
+                    class="flex items-center gap-2 text-sm text-white/70 mt-2 underline"
+                  >
+                    <img
+                      src={button.icon}
+                      alt={button.text}
+                      height="24"
+                      width="24"
+                    />
+                    {button.text}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
