@@ -5,6 +5,8 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://farhanfadila1717.github.io',
+  base: 'personal-website',
   integrations: [tailwind()],
   experimental: {
     svg: true,
