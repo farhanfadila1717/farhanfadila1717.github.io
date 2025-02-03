@@ -1,3 +1,10 @@
+---
+const title = "Farhan Flutter Developer";
+const description = `I’m from Indonesia and I have been working as a Mobile Developer for
+more than 4 years.`;
+const image = "/thubmnail.png";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,15 +55,25 @@
     <meta name="theme-color" content="#ffffff" />
 
     <meta name="generator" content={Astro.generator} />
-    <title>Farhan Flutter Developer</title>
-    <meta
-      name="description"
-      content="Farhan Fadila is a Flutter Developer from Indonesia"
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
     <meta
       name="keywords"
       content="farhan fadila, flutter developer, dart, software engineer,ß mobile developer, indonesia"
     />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
